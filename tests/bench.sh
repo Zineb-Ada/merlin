@@ -1,13 +1,11 @@
 #!/bin/bash
 function locate {
      sed -n "$1"p "$3"
-     printf "%$2s^\n" ' '
      ocamlmerlin single locate -look-for ml -position $1:$2 -filename $3 < $3 \
      | jq '{"results": [{"name": "locate", "metrics": [{"name": "'$1':'$2' '$3'", "value": .timing.query, "units": "ms"}]}]}'
 }
 function type_enclosing {
      sed -n "$1"p "$3"
-     printf "%$2s^\n" ' '
      ocamlmerlin single type-enclosing -position $1:$2 -verbosity 0 < $3 
      | jq '{"results": [{"name": "type_enclosing", "metrics": [{"name": "'$1':'$2' '$3'", "value": .timing.query, "units": "ms"}]}]}'
 }
