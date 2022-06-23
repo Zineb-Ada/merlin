@@ -6,7 +6,7 @@ function locate {
 }
 function type_enclosing {
      sed -n "$1"p "$3"
-     ocamlmerlin single type-enclosing -position $1:$2 -verbosity 0 < $3 
+     ocamlmerlin single type-enclosing -position $1:$2 -verbosity 0 < $3 \
      | jq '{"results": [{"name": "type_enclosing", "metrics": [{"name": "'$1':'$2' '$3'", "value": .timing.query, "units": "ms"}]}]}'
 }
 
