@@ -1,3 +1,5 @@
+# the purpose of this file is to set up the environment necessary to launch benchmarks. 
+# it clones the Irmin repository and installs the Irmin and Merlin dependencies
 FROM ocaml/opam:debian-10-ocaml-4.14
 RUN sudo apt-get install -y gnuplot-x11 libgmp-dev pkg-config libffi-dev jq
 RUN sudo rm /usr/bin/opam && sudo ln -s /usr/bin/opam-2.1 /usr/bin/opam
