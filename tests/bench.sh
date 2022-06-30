@@ -52,6 +52,10 @@ occurrences occurrences 40 46 ./src/irmin-mirage/git/irmin_mirage_git.ml src-irm
 occurrences occurrences 39 24 ./src/irmin-mirage/git/irmin_mirage_git.ml src-irmin-mirage-git-irmin_mirage_git.ml
 occurrences occurrences 50 18 ./src/irmin-mirage/git/irmin_mirage_git.ml src-irmin-mirage-git-irmin_mirage_git.ml
 occurrences occurrences 49 8 ./src/irmin-mirage/git/irmin_mirage_git.ml src-irmin-mirage-git-irmin_mirage_git.ml
-# occurrences occurrences 
-# occurrences occurrences 
-# occurrences occurrences 
+occurrences occurrences 178 34 ./src/irmin/tree.ml src-irmin-tree.ml
+occurrences occurrences 42 11 ./src/irmin/tree.ml src-irmin-tree.ml
+occurrences occurrences 186 30 ./src/irmin/tree.ml src-irmin-tree.ml
+
+# 54, i : 178,  k : 34 filename: ./src/irmin/tree.ml, word: list 
+# 54, i : 42,  k : 11 filename: ./src/irmin/tree.ml, word: x 
+# 143, i : 186,  k : 30 filename: ./src/irmin/tree.ml, word: context 
