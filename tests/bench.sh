@@ -3,8 +3,13 @@
 # on the cases that the commands take the most time on all Irmin repository 
 # and make sure to match the json of merlin to that of current-bench, in order to launch benchmarks.
 function prbench {
-     metricname=''$2':'$3'-'$4''
-     jq '{"results": [{"name": "'$1'", "metrics": [{"name": "'$metricname'/clock", "value": .timing.clock, "units": "ms"}, {"name": "'$metricname'/typer", "value": .timing.typer, "units": "ms"}, {"name": "'$metricname'/ppx", "value": .timing.ppx, "units": "ms"}, {"name": "'$metricname'/query", "value": .timing.query, "units": "ms"}, {"name": "'$metricname'/pp", "value": .timing.pp, "units": "ms"}]}]}'
+     metricname="$2:$3 $4"
+     jq '{"results": [{"name": "'$1'", "metrics": [
+               {"name": "'"$metricname"'/clock", "value": .timing.clock, "units": "ms"}, 
+               {"name": "'"$metricname"'/typer", "value": .timing.typer, "units": "ms"}, 
+               {"name": "'"$metricname"'/ppx", "value": .timing.ppx, "units": "ms"}, 
+               {"name": "'"$metricname"'/query", "value": .timing.query, "units": "ms"}, 
+               {"name": "'"$metricname"'/pp", "value": .timing.pp, "units": "ms"}]}]}'
 }
 
 function locate {
