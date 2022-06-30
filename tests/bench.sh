@@ -32,6 +32,7 @@ function occurrences {
      ocamlmerlin single $1 -identifier-at $2:$3 -filename $4 < $4 \
      | prbench $1 $2 $3 $5
 }
+
 locate locate 23 16 ./examples/irmin_git_store.ml examples-irmin_git_store.ml
 locate locate 118 21 ./examples/process.ml examples-process.ml
 locate locate 49 20 ./examples/push.ml examples-push.ml
@@ -54,8 +55,3 @@ occurrences occurrences 49 8 ./src/irmin-mirage/git/irmin_mirage_git.ml src-irmi
 # occurrences occurrences 
 # occurrences occurrences 
 # occurrences occurrences 
-
-# 25, i : 40 46 ./src/irmin-mirage/git/irmin_mirage_git.ml, word: t 
-# 26, i : 39 24 ./src/irmin-mirage/git/irmin_mirage_git.ml, word: Hash 
-# 28, i : 50 18 ./src/irmin-mirage/git/irmin_mirage_git.ml, word: Irmin_git 
-# 31, i : 49 8 ./src/irmin-mirage/git/irmin_mirage_git.ml, word: Ref 
