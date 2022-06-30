@@ -1,7 +1,9 @@
 #!/bin/bash
+
 # the purpose of this file is to run the ocamlmerlin locate, type-enclosing and occurrences commands 
 # on the cases that the commands take the most time on all Irmin repository 
 # and make sure to match the json of merlin to that of current-bench, in order to launch benchmarks.
+
 function prbench {
      metricname="$2:$3 $4"
      jq '{"results": [{"name": "'$1'", "metrics": [
